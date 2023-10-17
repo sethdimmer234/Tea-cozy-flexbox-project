@@ -14,11 +14,15 @@ body{
     background-color: black;
 }
 
+
 nav{
     height: 80px;
     display: flex;
 }
 
+header{
+    height: calc(100vh - 80px); /*was 150vh*/
+}
 img{
     width: 100%;
     max-width: 600px;
@@ -59,15 +63,32 @@ li{
 }
 
 .logo{
-    width: 200px;
+    width: 100px;
+}
+
+.header__container{
+    background-image: url("./assets/img-mission-background.jpg");
+    background-repeat:no-repeat ;
+    width: 100%;
+    max-width:1200px;
+    margin: 0 auto;
+    height: 100%;
+    max-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .header__description{
-    position: relative;
-    top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: black;
+}
+
+.row{
     width: 100%;
-    max-width: 1140px;
+    max-width: 1280px;
     margin: 0 auto;
 }
 
@@ -75,23 +96,246 @@ li{
 h2{
     text-align: center;
     margin-bottom: 32px;
-    color: white;
+    color:white
 }
 
 h4{
     color: white;
-    text-align: center;
-    
+}
+
+button{
+    cursor: pointer;
+}
+
+button:active{
+    transform:translateY(1px);
+}
+
+.btn{
+    background-color: #7342d6;
+    color: white;
+    padding: 12px 24px;
+    font-size: 20px;
+    border-radius: 4px;
+    border: none;
+
 }
 
 .header__img--wrapper{
     padding: 20px;
-    /* z-index: 50; */
+    z-index: 50;
     width: 100%;
-
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-.home__img{
+.container{
+    padding: 56px 0; 
     width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.row{
+    width:100%;
     max-width: 1200px;
+    margin: 0 auto;
 }
+
+.row__column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.no-cursor{
+    cursor: not-allowed;
+}
+
+
+
+
+.teas{         
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tea{          
+    width: 25%;
+    padding: 24px;
+}
+
+.tea__img{      
+    max-height: 200px;
+    transition: all 300ms ease;
+    cursor: not-allowed;
+    width: 100%;
+    max-width:300px ;
+}
+
+.tea__img--wrapper{        
+    margin-bottom: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+}
+
+.book:hover .book__img{
+    transform:scale(1.03);
+}
+
+.tea__title{       
+    margin-top:10px;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.tea__title:hover{
+    text-decoration: underline;
+    cursor: not-allowed;
+}
+
+
+
+#latest .container{
+
+    background-image: url("./assets/img-locations-background.jpg");
+    background-repeat: no-repeat;
+}
+
+.teas__container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.section__title{
+    margin-bottom: 15px;
+    opacity: 1;
+}
+
+
+
+.location__wrapper {          
+    /* padding-right: 32px; */
+    /* width: 33%; */
+    flex-basis: 0;
+    margin-bottom: 10px;
+    display: flex;
+  }
+
+  .location__card {      
+    width: 100%;
+    padding: 8px 16px 0px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.06);
+    position: relative;
+    background-color: black;
+    /* height: 100%; */
+    margin: 20px;
+  }
+
+
+
+
+  .location__header { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 0px;
+  }
+  
+  .location__name {       
+    font-weight: 700;
+    font-size: 20px;
+    color: #1a202c;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .location__price {     
+    font-weight: 700;
+    font-size: 48px;
+    color: #1a202c;
+    margin: 4px auto;
+    text-align: center;
+  }
+  
+  .location__plan {
+    font-size: 16px;
+    font-weight: 700;
+    color: #a0ace0;
+  }
+  
+  .location__features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px;
+    max-width:400px;
+    box-sizing: content-box; 
+  }
+  
+  .location__feature--main {
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    text-align: center;
+  }
+  
+  .location__feature {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    opacity: 1;
+  }
+  
+  .location__action {
+    padding: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h5{
+    color: white;
+    margin-top: 20px;
+    font-size:20px ;
+    text-align: center;
+  }
+
+  .footer__copyright{
+    color: white;
+    display: flex;
+
+  }
+
+  p{
+    color:white;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+
+  }
+
+  .footer__logo{
+    color: white;
+  }
+
+  footer{
+    height:100%;
+    max-height: 200px;
+  }
+
+
+
+
+
